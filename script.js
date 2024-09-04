@@ -1,25 +1,27 @@
+let cachedSentences = {};  // Object to store cached sentences for each month
+
 function findHoroscope() {
 
-    //get the users input from text field
+    // Get the user's input from the text field
     let birthMonth = document.getElementById("birthMonthInput").value;
     birthMonth = birthMonth.trim().toLowerCase();
 
     console.log("Horoscope for your sign");
 
-    let signJanuary = "✨🐐 Capricorn 🐐✨  ";
-    let signFebruary = "✨🌊 Aquarius 🌊✨  ";
-    let signMarch = "✨🐠 Pisces 🐠✨   ";
-    let signApril = "✨🐏 Aries 🐏✨    ";
-    let signMay = "✨🐃 Taurus 🐃✨ ";
-    let signJune = "✨👯 Gemini 👯✨    ";
-    let signJuly = "✨🦀 Cancer 🦀✨    ";
-    let signAugust = "✨🦁 Leo 🦁✨ ";
-    let signSeptember = "✨👸 Virgo 👸✨    ";
-    let signOctober = "✨⚖️ Libra ⚖️✨    ";
-    let signNovember = "✨🦂 Scorpio 🦂✨   ";
-    let signDecember = "✨🏹 Sagittarius 🏹✨   ";
+    let signJanuary = "✨🐐 Capricorn 🐐✨";
+    let signFebruary = "✨🌊 Aquarius 🌊✨";
+    let signMarch = "✨🐠 Pisces 🐠✨";
+    let signApril = "✨🐏 Aries 🐏✨";
+    let signMay = "✨🐃 Taurus 🐃✨";
+    let signJune = "✨👯 Gemini 👯✨";
+    let signJuly = "✨🦀 Cancer 🦀✨";
+    let signAugust = "✨🦁 Leo 🦁✨";
+    let signSeptember = "✨👸 Virgo 👸✨";
+    let signOctober = "✨⚖️ Libra ⚖️✨";
+    let signNovember = "✨🦂 Scorpio 🦂✨";
+    let signDecember = "✨🏹 Sagittarius 🏹✨";
 
-    //an array
+    // An array of future teller sentences
     let futureTellerSentences = [
         "In the coming month, you will experience loss.",
         "A person close to you will make you very happy.",
@@ -34,46 +36,50 @@ function findHoroscope() {
         "Someone is watching you."
     ];
 
-    // math floor rounds up. math random chooses a nimber between 0 and 1. * futuretellersentene.lengt. lengt= how many in the array. so it * with that number.
-    let randomNumber = Math.floor(Math.random() * futureTellerSentences.length);
-    // bracket notation ([]) to access an element in the array futureTellerSentences.
-    let randomSentence = futureTellerSentences[randomNumber];
-
+    //defines it before being used
     let horoscopeMessage;
-    if (birthMonth === "january") {
-        horoscopeMessage = signJanuary + ": " + randomSentence;
-    } else if (birthMonth === "february") {
-        horoscopeMessage = signFebruary + ": " + randomSentence;
-    } else if (birthMonth === "march") {
-        horoscopeMessage = signMarch + ": " + randomSentence;
-    } else if (birthMonth === "april") {
-        horoscopeMessage = signApril + ": " + randomSentence;
-    } else if (birthMonth === "may") {
-        horoscopeMessage = signMay + ": " + randomSentence;
-    } else if (birthMonth === "june") {
-        horoscopeMessage = signJune + ": " + randomSentence;
-    } else if (birthMonth === "july") {
-        horoscopeMessage = signJuly + ": " + randomSentence;
-    } else if (birthMonth === "august") {
-        horoscopeMessage = signAugust + ": " + randomSentence;
-    } else if (birthMonth === "september") {
-        horoscopeMessage = signSeptember + ": " + randomSentence;
-    } else if (birthMonth === "october") {
-        horoscopeMessage = signOctober + ": " + randomSentence;
-    } else if (birthMonth === "november") {
-        horoscopeMessage = signNovember + ": " + randomSentence;
-    } else if (birthMonth === "december") {
-        horoscopeMessage = signDecember + ": " + randomSentence;
+
+    // Check if the sentence for the entered month is already cached
+    if (cachedSentences[birthMonth]) {
+        horoscopeMessage = cachedSentences[birthMonth];
     } else {
-        horoscopeMessage = "Error: Please enter a valid month. Check for type errors :)"
+        let randomNumber = Math.floor(Math.random() * futureTellerSentences.length);
+        cachedSentences[birthMonth] = futureTellerSentences[randomNumber];
+        horoscopeMessage = cachedSentences[birthMonth];
     }
 
-    //display horoscope result in html
+    // Assign the correct sign and display the horoscope message
+    if (birthMonth === "january") {
+        horoscopeMessage = signJanuary + ": " + horoscopeMessage;
+    } else if (birthMonth === "february") {
+        horoscopeMessage = signFebruary + ": " + horoscopeMessage;
+    } else if (birthMonth === "march") {
+        horoscopeMessage = signMarch + ": " + horoscopeMessage;
+    } else if (birthMonth === "april") {
+        horoscopeMessage = signApril + ": " + horoscopeMessage;
+    } else if (birthMonth === "may") {
+        horoscopeMessage = signMay + ": " + horoscopeMessage;
+    } else if (birthMonth === "june") {
+        horoscopeMessage = signJune + ": " + horoscopeMessage;
+    } else if (birthMonth === "july") {
+        horoscopeMessage = signJuly + ": " + horoscopeMessage;
+    } else if (birthMonth === "august") {
+        horoscopeMessage = signAugust + ": " + horoscopeMessage;
+    } else if (birthMonth === "september") {
+        horoscopeMessage = signSeptember + ": " + horoscopeMessage;
+    } else if (birthMonth === "october") {
+        horoscopeMessage = signOctober + ": " + horoscopeMessage;
+    } else if (birthMonth === "november") {
+        horoscopeMessage = signNovember + ": " + horoscopeMessage;
+    } else if (birthMonth === "december") {
+        horoscopeMessage = signDecember + ": " + horoscopeMessage;
+    } else {
+        horoscopeMessage = "Error: Please enter a valid month. Check for type errors :)";
+    }
+
+    // Display horoscope result in HTML
     document.getElementById("horoscopeResult").innerText = horoscopeMessage;
-
 }
-
-
 
 
 

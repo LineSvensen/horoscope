@@ -6,18 +6,18 @@ function findHoroscope() {
 
     console.log("Horoscope for your sign");
 
-    let signJanuary = "Capricorn";
-    let signFebruary = "Aquarius";
-    let signMarch = "Pisces";
-    let signApril = "Aries";
-    let signMay = "Taurus";
-    let signJune = "Gemini";
-    let signJuly = "Cancer";
-    let signAugust = "Leo";
-    let signSeptember = "Virgo";
-    let signOctober = "Libra";
-    let signNovember = "Scorpio";
-    let signDecember = "Sagittarius";
+    let signJanuary = "✨🐐 Capricorn 🐐✨  ";
+    let signFebruary = "✨🌊 Aquarius 🌊✨  ";
+    let signMarch = "✨🐠 Pisces 🐠✨   ";
+    let signApril = "✨🐏 Aries 🐏✨    ";
+    let signMay = "✨🐃 Taurus 🐃✨ ";
+    let signJune = "✨👯 Gemini 👯✨    ";
+    let signJuly = "✨🦀 Cancer 🦀✨    ";
+    let signAugust = "✨🦁 Leo 🦁✨ ";
+    let signSeptember = "✨👸 Virgo 👸✨    ";
+    let signOctober = "✨⚖️ Libra ⚖️✨    ";
+    let signNovember = "✨🦂 Scorpio 🦂✨   ";
+    let signDecember = "✨🏹 Sagittarius 🏹✨   ";
 
     //an array
     let futureTellerSentences = [

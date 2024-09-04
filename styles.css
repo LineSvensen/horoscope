@@ -29,6 +29,10 @@ body {
     padding: 8px;
 }
 
+#horoscopeResult  {
+    max-width: 250px;
+}
+
 button {
     margin: 16px;
 }

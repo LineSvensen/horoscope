@@ -4,7 +4,7 @@
 
 ![Horoscope](assets/horoscopeScreenshot.png)
 
-## Website here: 
+## Website here: [https://horoscope-eight-delta.vercel.app/](https://horoscope-eight-delta.vercel.app/)
 
 ## Programs used 🛠️
 - Webstorm (HTML, CSS, JavaScript)

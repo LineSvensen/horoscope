@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: black;
+    margin: 0;
     color: white;
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
@@ -20,12 +21,12 @@ body {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 52px;
     margin-bottom: 0;
 }
 
 p {
-    font-size: 32px;
+    font-size: 42px;
     margin: 0;
 }
 
@@ -39,7 +40,7 @@ p {
     font-weight: 600;
     font-style: normal;
     letter-spacing: 1px;
-    font-size: 32px;
+    font-size: 42px;
     text-transform: capitalize;
     color: black;
     border-radius: 4px;
@@ -62,7 +63,7 @@ button:hover {
 .content-box {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -220,13 +221,9 @@ button:hover {
 @media (max-width: 500px) {
     .content-box {
         min-width: 350px;
-
     }
-
-
 }
 
 @media (min-width: 500px) {
-
 
 }

@@ -220,6 +220,11 @@ button:hover {
 @media (max-width: 500px) {
     .content-box {
         min-width: 350px;
+
+    }
+
+    body {
+        height: 0;
     }
 
 
